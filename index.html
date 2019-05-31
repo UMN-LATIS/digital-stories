@@ -1,0 +1,160 @@
+
+<head>
+    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/dist/css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="node_modules/video.js/dist/video-js.css" />
+</head>
+
+<body>
+
+    <!-- jQuery version must be >= 1.8.0; -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/lightgallery/dist/js/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+
+    <script src="node_modules/lg-video/dist/lg-video.min.js"></script>
+    <script src="node_modules/video.js/dist/video.js"></script>
+    
+    <div style="display:none;" id="video1">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/blair.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div style="display:none;" id="video2">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/erin.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div style="display:none;" id="video3">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/kirby.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div style="display:none;" id="video4">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/marcie.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div style="display:none;" id="video5">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/mo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div style="display:none;" id="video6">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/rory.mov" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div style="display:none;" id="video7">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/serena.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div style="display:none;" id="video8">
+        <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+            <source src="video/travis.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div class="mainContainer" >
+        <div class="row" id="video-gallery">
+            <div class="col col-3" data-html="#video1" data-poster="img/blair.png">
+                <img src="img/blair.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+            <div class="col col-3" data-html="#video2" data-poster="img/erin.png">
+                <img src="img/erin.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+            <div class="col col-3" data-html="#video3" data-poster="img/kirby.png">
+                <img src="img/kirby.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+            <div class="col col-3" data-html="#video4" data-poster="img/marcie.png">
+                <img src="img/marcie.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+
+            <div class="col col-3" data-html="#video5" data-poster="img/mo.png">
+                <img src="img/mo.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+            <div class="col col-3" data-html="#video6" data-poster="img/rory.png">
+                <img src="img/rory.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+            <div class="col col-3" data-html="#video7" data-poster="img/serena.png">
+                <img src="img/serena.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+            <div class="col col-3" data-html="#video8" data-poster="img/travis.png">
+                <img src="img/travis.png" class=" rounded" style="width: 100%; height:100%">
+            </div>
+
+
+        </div>
+
+    </div>
+   <style>
+       img {
+       object-fit: cover;
+       }
+       [class*="col-"] {
+       background-clip: padding-box;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+       }
+       .row {
+           height: 50%;
+           /* padding-top: 10px; */
+           /* padding-bottom: 10px; */
+       }
+
+       .col {
+           cursor: pointer;
+           height: 100%;
+           padding-left:0px;
+           padding-right:0px;
+           /* margin-top: 10px; */
+           /* margin-bottom: 10px; */
+           /* margin-left: 10px; */
+           /* margin-right:10px; */
+           /* background-color: aqua; */
+       }
+
+       .mainContainer {
+           width: 90%;
+           height: 90%;
+
+       }
+
+       html {
+           height: 100%;
+       }
+
+       body {
+           background-color:rgb(50, 50, 50);
+           height: 100%;
+           align-items: center;
+           display: flex;
+           justify-content: center;
+       }
+   </style>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#video-gallery').lightGallery({
+            controls:false,
+            videojs: true,
+            autoplayFirstVideo: true
+        });
+    });
+</script>
