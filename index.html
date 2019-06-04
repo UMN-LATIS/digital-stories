@@ -150,11 +150,23 @@
 </body>
 
 <script type="text/javascript">
+var lg;
     $(document).ready(function () {
-        $('#video-gallery').lightGallery({
+        lg = $('#video-gallery').lightGallery({
             controls:false,
             videojs: true,
             autoplayFirstVideo: true
         });
+        lg.on("onAfterOpen.lg", function() {
+            setTimeout(function() {
+                $(document).find("video").on("ended", function() {
+                    console.log("video ended");
+                    $(document).find(".lg-close").trigger("click");
+                });
+                
+            }, 500);
+        });
     });
+
+
 </script>
